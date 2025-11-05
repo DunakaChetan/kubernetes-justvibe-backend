@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustVibe Backend API</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .status {
+            background: rgba(76, 175, 80, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .endpoints {
+            margin-top: 30px;
+        }
+        .endpoint {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+        }
+        .method {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .get { background: #4CAF50; }
+        .post { background: #FF9800; }
+        .delete { background: #F44336; }
+        .url {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 JustVibe Backend API</h1>
+        
+        <div class="status">
+            <h3>✅ Service Status: Running</h3>
+            <p>Your JustVibe backend is successfully deployed and running on Tomcat 9!</p>
+        </div>
+
+        <div class="endpoints">
+            <h3>📡 Available Endpoints</h3>
+
+            <h4>👥 User Management</h4>
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <span class="url">/users/insert</span>
+                <span>Register User</span>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <span class="url">/users/signin</span>
+                <span>User Login</span>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <span class="url">/users/getusername</span>
+                <span>Get Username</span>
+            </div>
+
+            <h4>🎵 Music Management</h4>
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <span class="url">/albums</span>
+                <span>Get All Albums</span>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <span class="url">/albums/{id}</span>
+                <span>Get Album by ID</span>
+            </div>
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <span class="url">/songs/{id}</span>
+                <span>Get Song by ID</span>
+            </div>
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <span class="url">/songs/upload</span>
+                <span>Upload Song</span>
+            </div>
+            <div class="endpoint">
+                <span class="method delete">DELETE</span>
+                <span class="url">/songs/delete/{filename}</span>
+                <span>Delete Song</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; opacity: 0.8;">
+            <p>🚀 Deployed via Jenkins | 🐳 Running on Tomcat 9 | ☁️ Azure Blob Storage</p>
+        </div>
+    </div>
+</body>
+</html>
